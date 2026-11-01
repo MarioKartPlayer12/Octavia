@@ -1,0 +1,47 @@
+{
+  "solutions": [
+    {
+      "colors": [
+        "yellow",
+        "blue",
+        "red",
+        "ivory",
+        "green"
+      ],
+      "nats": [
+        "Norwegian",
+        "Ukrainian",
+        "Englishman",
+        "Spaniard",
+        "Japanese"
+      ],
+      "drinks": [
+        "water",
+        "tea",
+        "milk",
+        "orange juice",
+        "coffee"
+      ],
+      "smokes": [
+        "Kools",
+        "Chesterfields",
+        "Old Gold",
+        "Lucky Strike",
+        "Parliaments"
+      ],
+      "pets": [
+        "fox",
+        "horse",
+        "snails",
+        "dog",
+        "zebra"
+      ]
+    }
+  ],
+  "answers": [
+    {
+      "water_drinker": "Norwegian",
+      "zebra_owner": "Japanese"
+    }
+  ]
+}

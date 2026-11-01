@@ -1,0 +1,65 @@
+[
+  {
+    "question": "Heat flows between two objects because of a temperature difference. If a warm spoon is placed in cold soup, which way does thermal energy flow?",
+    "options": [
+      [
+        "A",
+        "from the soup to the spoon"
+      ],
+      [
+        "B",
+        "from the spoon to the soup"
+      ],
+      [
+        "C",
+        "no flow"
+      ],
+      [
+        "D",
+        "both ways equally"
+      ]
+    ]
+  },
+  {
+    "question": "A student changes the amount of light a plant receives and measures growth. What is the amount of light?",
+    "options": [
+      [
+        "A",
+        "the dependent variable"
+      ],
+      [
+        "B",
+        "the independent variable"
+      ],
+      [
+        "C",
+        "the control"
+      ],
+      [
+        "D",
+        "the conclusion"
+      ]
+    ]
+  },
+  {
+    "question": "What is the smallest unit of gold that keeps the properties of gold?",
+    "options": [
+      [
+        "A",
+        "the atom"
+      ],
+      [
+        "B",
+        "the proton"
+      ],
+      [
+        "C",
+        "the electron"
+      ],
+      [
+        "D",
+        "the nucleus"
+      ]
+    ]
+  }
+]

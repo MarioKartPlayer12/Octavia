@@ -1,0 +1,158 @@
+{
+  "pass_rate": 1.0,
+  "results": [
+    {
+      "op": "simplify",
+      "ok": true,
+      "raw": {
+        "ok": true,
+        "op": "simplify",
+        "result": "1",
+        "latex": "1"
+      }
+    },
+    {
+      "op": "expand",
+      "ok": true,
+      "raw": {
+        "ok": true,
+        "op": "expand",
+        "result": "x**2 + 2*x + 1",
+        "latex": "x^{2} + 2 x + 1"
+      }
+    },
+    {
+      "op": "factor",
+      "ok": true,
+      "raw": {
+        "ok": true,
+        "op": "factor",
+        "result": "(x - 3)*(x - 2)",
+        "latex": "\\left(x - 3\\right) \\left(x - 2\\right)"
+      }
+    },
+    {
+      "op": "solve",
+      "ok": true,
+      "raw": {
+        "ok": true,
+        "op": "solve",
+        "solutions": [
+          {
+            "x": "-2"
+          },
+          {
+            "x": "2"
+          }
+        ],
+        "n_solutions": 2
+      }
+    },
+    {
+      "op": "solve",
+      "ok": true,
+      "raw": {
+        "ok": true,
+        "op": "solve",
+        "solutions": [
+          {
+            "x": "2",
+            "y": "1"
+          }
+        ],
+        "n_solutions": 1
+      }
+    },
+    {
+      "op": "diff",
+      "ok": true,
+      "raw": {
+        "ok": true,
+        "op": "diff",
+        "result": "3*x**2 + 2",
+        "latex": "3 x^{2} + 2"
+      }
+    },
+    {
+      "op": "integrate",
+      "ok": true,
+      "raw": {
+        "ok": true,
+        "op": "integrate",
+        "result": "x**3/3",
+        "latex": "\\frac{x^{3}}{3}"
+      }
+    },
+    {
+      "op": "integrate",
+      "ok": true,
+      "raw": {
+        "ok": true,
+        "op": "integrate",
+        "result": "2",
+        "latex": "2"
+      }
+    },
+    {
+      "op": "limit",
+      "ok": true,
+      "raw": {
+        "ok": true,
+        "op": "limit",
+        "result": "1",
+        "latex": "1"
+      }
+    },
+    {
+      "op": "roots",
+      "ok": true,
+      "raw": {
+        "ok": true,
+        "op": "roots",
+        "roots": {
+          "3": "1",
+          "-2": "1"
+        }
+      }
+    },
+    {
+      "op": "system",
+      "ok": true,
+      "raw": {
+        "ok": true,
+        "op": "system",
+        "solutions": [
+          "(2, 1)"
+        ]
+      }
+    },
+    {
+      "op": "eval",
+      "ok": true,
+      "raw": {
+        "ok": true,
+        "op": "eval",
+        "expr": "2*x + 3",
+        "value": "11.0000000000000"
+      }
+    },
+    {
+      "op": "series",
+      "ok": true,
+      "raw": {
+        "ok": true,
+        "op": "series",
+        "result": "1 + x + x**2/2 + x**3/6 + x**4/24 + O(x**5)"
+      }
+    },
+    {
+      "op": "det",
+      "ok": true,
+      "raw": {
+        "ok": true,
+        "op": "det",
+        "det": "-2"
+      }
+    }
+  ]
+}

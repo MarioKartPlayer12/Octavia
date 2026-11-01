@@ -1,0 +1,25 @@
+{
+  "mechanisms": [
+    "rotation_increase",
+    "thermal_flow",
+    "predator_removed",
+    "resource_depletion",
+    "freezing_point",
+    "greenhouse_abundance",
+    "smallest_unit",
+    "prokaryote_eukaryote",
+    "sun_ocean",
+    "fossil_climate",
+    "food_storage_behavior",
+    "photosynthesis_start",
+    "infectious_disease"
+  ],
+  "method_order": [
+    "state question/hypothesis",
+    "plan procedure & make data table",
+    "make observations / collect data",
+    "analyze results",
+    "write report",
+    "repeat investigation"
+  ]
+}

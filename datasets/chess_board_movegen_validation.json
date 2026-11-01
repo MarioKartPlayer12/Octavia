@@ -1,0 +1,17 @@
+{
+  "puzzle_fen": "8/p7/1p4p1/1P1pk1P1/1P6/2P1K3/8/8 b - - 0 1",
+  "black_legal_moves": [
+    "a7a6",
+    "a7a5",
+    "d5d4",
+    "e5d6",
+    "e5e6",
+    "e5f5"
+  ],
+  "checks": [
+    "startpos_20",
+    "checkmate",
+    "stalemate",
+    "apply"
+  ]
+}

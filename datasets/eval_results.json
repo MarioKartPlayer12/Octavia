@@ -1,0 +1,11 @@
+{
+  "rl_ev_per_hand": 0.81645,
+  "rl_win_rate": 0.67042,
+  "rl_loss_rate": 0.2768,
+  "rl_push_rate": 0.05278,
+  "basic_strategy_ev_per_hand": -0.03903,
+  "bs_win_rate": 0.42424,
+  "bs_loss_rate": 0.4934,
+  "bs_push_rate": 0.08236,
+  "episodes_trained": 400000
+}
