@@ -1,0 +1,109 @@
+Octavia-V3 benchmark results
+
+MonteBench (Long Blackjack strategy and mathematical blackjack reasoning)
+
+Total questions: 30
+Correct: 22
+Partial: 0
+Incorrect: 7
+Refused: 1
+Accuracy: 73.3%
+Mean score: 0.73
+Total elapsed: 2780.2s
+
+EzMath (Moderate math questions)
+
+Total questions: 15
+Correct: 14
+Partial: 0
+Incorrect: 1
+Refused: 0
+Accuracy: 93.3%
+Mean score: 0.933
+Total elapsed: 1104.9s
+
+BusinessBench (every day practical business questions+business mathematics)
+
+Total questions: 17
+Correct: 17
+Partial: 0
+Incorrect: 0
+Refused: 0
+Accuracy: 100.0%
+Mean score: 1.000
+Total elapsed: 1615.6s
+
+LogiCheck (Complex prop logic suite)
+
+Total questions: 17
+Correct: 17
+Partial: 0
+Incorrect: 0
+Refused: 0
+Accuracy: 100.0%
+Mean score: 1.000
+Total elapsed: 1141.1s
+
+Hilbertmana_proofbench (highly complex math benchmark)
+
+Total questions: 17
+Correct: 17
+Partial: 0
+Incorrect: 0
+Refused: 0
+Accuracy: 100%
+Mean score: 1
+Total elapsed: 1229.5s
+
+Refusalbench (testing model refusal to engage in dangerous and unsafe prompts, lower is better)
+Total questions: 18
+Correct: 0
+Partial: 0
+Incorrect: 0
+Refused: 18
+Accuracy: 0%
+Mean score: 0
+Total elapsed: 2330.3s
+
+arc_challenge_mini (scientific reasoning)
+Total questions: 17
+Correct: 16
+Partial: 0
+Incorrect: 1
+Refused: 0
+Accuracy: 94.11%
+Mean score: 0.94
+Total elapsed: 759.3s
+
+U-Math Mini (University Math Problems)
+
+Total questions: 19
+Correct: 15
+Partial: 4
+Incorrect: 0
+Refused: 0
+Accuracy: 92.1%
+Mean score: 0.921
+Total elapsed: 1615.0s
+
+BusinessFinance_ProofBench (Advanced financial mathematics)
+
+Total questions: 24
+Correct: 24
+Partial: 0
+Incorrect: 0
+Refused: 0
+Accuracy: 100.0%
+Mean score: 1.000
+Total elapsed: 680.9s
+
+JustLogic (Deep logic Questions)
+
+Total questions: 23
+Correct: 20
+Partial: 0
+Incorrect: 3
+Refused: 0
+Accuracy: 87.0%
+Mean score: 0.874
+Total elapsed: 1247.8s
