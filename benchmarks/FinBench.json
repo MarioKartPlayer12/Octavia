@@ -1,0 +1,218 @@
+{
+  "name": "businessfinance_proofbench",
+  "description": "A rigorous business finance benchmark testing quantitative reasoning across time value of money, capital budgeting, cost of capital, equity and bond valuation, financial statement analysis, ratios, and working capital management. Questions require multi-step calculations, correct accounting classifications, and precise final answers rather than pattern matching.",
+  "version": "1",
+  "questions": [
+    {
+      "id": "q01",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: If $10,000 is invested at 8% annual interest compounded annually for 5 years, what is the future value in dollars? Round to the nearest dollar.",
+      "answer": "14693",
+      "type": "numeric",
+      "tolerance": 1,
+      "tags": ["time-value-of-money", "compounding"],
+      "notes": "FV = 10000 * 1.08^5 = 10000 * 1.4693280768 = 14693.28."
+    },
+    {
+      "id": "q02",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: What is the present value of $50,000 to be received in 6 years, discounted at 7% per year? Round to the nearest dollar.",
+      "answer": "33317",
+      "type": "numeric",
+      "tolerance": 1,
+      "tags": ["time-value-of-money", "discounting"],
+      "notes": "PV = 50000 / 1.07^6 = 50000 / 1.5007303518 = 33317.11."
+    },
+    {
+      "id": "q03",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: A bank quotes a nominal annual rate of 12% compounded monthly. What is the effective annual rate, in percent? Round to two decimal places.",
+      "answer": "12.68",
+      "type": "numeric",
+      "tolerance": 0.01,
+      "tags": ["time-value-of-money", "interest-rates"],
+      "notes": "EAR = (1 + 0.12/12)^12 - 1 = 1.01^12 - 1 = 0.126825 = 12.6825%."
+    },
+    {
+      "id": "q04",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: What is the annual payment on a 5-year $100,000 loan at 8% annual interest, amortized with equal end-of-year payments? Round to the nearest dollar.",
+      "answer": "25046",
+      "type": "numeric",
+      "tolerance": 2,
+      "tags": ["time-value-of-money", "loans", "annuity"],
+      "notes": "PMT = 100000 * 0.08 / (1 - 1.08^-5) = 8000 / 0.3194168 = 25045.65, rounds to 25046."
+    },
+    {
+      "id": "q05",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: What is the present value of a perpetuity that pays $5,000 per year forever, with the first payment one year from now and a discount rate of 8%?",
+      "answer": "62500",
+      "type": "numeric",
+      "tolerance": 0,
+      "tags": ["time-value-of-money", "perpetuity"],
+      "notes": "PV = 5000 / 0.08 = 62500."
+    },
+    {
+      "id": "q06",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: A project requires an initial investment of $100,000 and generates cash flows of $30,000 at the end of each year for 4 years. With a discount rate of 10%, what is the NPV in dollars? Round to the nearest dollar and include the sign.",
+      "answer": "-4904",
+      "type": "numeric",
+      "tolerance": 2,
+      "tags": ["capital-budgeting", "npv"],
+      "notes": "PV of annuity = 30000 * (1 - 1.1^-4)/0.10 = 30000 * 3.1698654 = 95095.96; NPV = 95095.96 - 100000 = -4904.04. Negative, so the project should be rejected."
+    },
+    {
+      "id": "q07",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: A project costs $80,000 and generates cash inflows of $20,000 in year 1, $30,000 in year 2, $40,000 in year 3, and $10,000 in year 4. What is its payback period, in years?",
+      "answer": "2.75",
+      "type": "numeric",
+      "tolerance": 0.01,
+      "tags": ["capital-budgeting", "payback"],
+      "notes": "Cumulative: 20k (y1), 50k (y2), 90k (y3). Need 30k of year 3's 40k: 2 + 30/40 = 2.75 years."
+    },
+    {
+      "id": "q08",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: A project requires an initial outlay of $200,000 and returns $230,000 exactly one year later. What is the project's IRR, in percent?",
+      "answer": "15",
+      "type": "numeric",
+      "tolerance": 0.1,
+      "tags": ["capital-budgeting", "irr"],
+      "notes": "IRR = 230000/200000 - 1 = 0.15 = 15%."
+    },
+    {
+      "id": "q09",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: The discount rate at which a project's NPV equals exactly zero is known by what three-letter abbreviation?",
+      "answer": "IRR",
+      "type": "contains",
+      "tags": ["capital-budgeting", "irr"],
+      "notes": "Internal rate of return."
+    },
+    {
+      "id": "q10",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: A project has conventional cash flows (one initial outflow followed by inflows only). Is it possible for such a project to have a positive NPV at a discount rate greater than its IRR? Answer yes or no.",
+      "answer": "no",
+      "type": "exact",
+      "tags": ["capital-budgeting", "npv", "irr"],
+      "notes": "With conventional cash flows NPV is strictly decreasing in the discount rate, so NPV > 0 if and only if the discount rate is below the IRR."
+    },
+    {
+      "id": "q11",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: A company is financed with 60% equity and 40% debt. Its cost of equity is 12%, its pre-tax cost of debt is 8%, and its marginal tax rate is 25%. What is its WACC, in percent?",
+      "answer": "9.6",
+      "type": "numeric",
+      "tolerance": 0.1,
+      "tags": ["cost-of-capital", "wacc"],
+      "notes": "WACC = 0.60*12 + 0.40*8*(1 - 0.25) = 7.2 + 2.4 = 9.6%."
+    },
+    {
+      "id": "q12",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Using the CAPM, what is the expected return, in percent, of a stock with a beta of 1.4 when the risk-free rate is 3% and the market risk premium is 6%?",
+      "answer": "11.4",
+      "type": "numeric",
+      "tolerance": 0.1,
+      "tags": ["portfolio-theory", "capm"],
+      "notes": "E[R] = 3 + 1.4 * 6 = 11.4%."
+    },
+    {
+      "id": "q13",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: A stock just paid a dividend of $2.00 per share. Dividends are expected to grow at 5% per year forever and the required return is 10%. What is the stock's value per share under the Gordon Growth Model?",
+      "answer": "42",
+      "type": "numeric",
+      "tolerance": 0.5,
+      "tags": ["equity-valuation", "ddm"],
+      "notes": "P0 = D1/(r - g) = (2.00 * 1.05)/(0.10 - 0.05) = 2.10/0.05 = 42."
+    },
+    {
+      "id": "q14",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: What is the price of a bond with a $1,000 face value, a 6% annual coupon paid annually, 3 years to maturity, and a yield to maturity of 7%? Round to the nearest dollar.",
+      "answer": "974",
+      "type": "numeric",
+      "tolerance": 2,
+      "tags": ["fixed-income", "bonds", "valuation"],
+      "notes": "Price = 60/1.07 + 60/1.07^2 + 1060/1.07^3 = 56.07 + 52.41 + 865.28 = 973.76. Coupon rate < YTM, so the bond trades at a discount to par."
+    },
+    {
+      "id": "q15",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Can the standard deviation of a two-asset portfolio ever be lower than the standard deviations of both individual assets? Answer yes or no.",
+      "answer": "yes",
+      "type": "exact",
+      "tags": ["portfolio-theory", "risk", "diversification"],
+      "notes": "With sufficiently low or negative correlation the diversification effect dominates; e.g., perfectly negatively correlated assets with the right weights give a portfolio standard deviation of zero."
+    },
+    {
+      "id": "q16",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: A company has current assets of $450,000 and current liabilities of $300,000. What is its current ratio?",
+      "answer": "1.5",
+      "type": "numeric",
+      "tolerance": 0.01,
+      "tags": ["ratios", "liquidity"],
+      "notes": "450000/300000 = 1.5."
+    },
+    {
+      "id": "q17",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: A company has cash of $120,000, accounts receivable of $80,000, inventory of $150,000, and current liabilities of $200,000. What is its quick ratio (acid-test ratio)?",
+      "answer": "1",
+      "type": "numeric",
+      "tolerance": 0.01,
+      "tags": ["ratios", "liquidity"],
+      "notes": "Quick assets exclude inventory: (120000 + 80000)/200000 = 1.0."
+    },
+    {
+      "id": "q18",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: A company has net income of $200,000, sales of $2,000,000, total assets of $1,600,000, and total equity of $800,000. Using the DuPont identity, what is its ROE, in percent?",
+      "answer": "25",
+      "type": "numeric",
+      "tolerance": 0.1,
+      "tags": ["ratios", "dupont", "profitability"],
+      "notes": "DuPont: 10% margin * 1.25 asset turnover * 2.0 equity multiplier = 25%; cross-check NI/Equity = 200000/800000 = 25%."
+    },
+    {
+      "id": "q19",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: A company has net income of $1,200,000, pays preferred dividends of $200,000, and has 400,000 weighted-average common shares outstanding. What is its basic earnings per share, in dollars?",
+      "answer": "2.5",
+      "type": "numeric",
+      "tolerance": 0.01,
+      "tags": ["financial-statements", "eps"],
+      "notes": "EPS = (1200000 - 200000)/400000 = 2.50; preferred dividends are subtracted before dividing by common shares."
+    },
+    {
+      "id": "q20",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: A company has days inventory outstanding of 60 days, days sales outstanding of 45 days, and days payables outstanding of 30 days. What is its cash conversion cycle, in days?",
+      "answer": "75",
+      "type": "numeric",
+      "tolerance": 0,
+      "tags": ["working-capital"],
+      "notes": "CCC = 60 + 45 - 30 = 75 days."
+    },
+    {
+      "id": "q21",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: A company has EBIT of $600,000, a tax rate of 25%, depreciation of $100,000, an increase in net working capital of $50,000, and capital expenditures of $200,000. What is its free cash flow, in dollars?",
+      "answer": "300000",
+      "type": "numeric",
+      "tolerance": 0,
+      "tags": ["valuation", "fcf"],
+      "notes": "FCF = EBIT*(1 - t) + D - dNWC - CapEx = 450000 + 100000 - 50000 - 200000 = 300000."
+    },
+    {
+      "id": "q22",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: A company sells a product for $50 per unit. Variable cost is $30 per unit and fixed costs are $60,000 per year. How many units must be sold per year to break even?",
+      "answer": "3000",
+      "type": "numeric",
+      "tolerance": 0,
+      "tags": ["cost-accounting", "break-even"],
+      "notes": "Contribution margin = 50 - 30 = 20; break-even = 60000/20 = 3000 units."
+    },
+    {
+      "id": "q23",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Which of the following appear on the income statement? (a) Retained earnings (b) Cost of goods sold (c) Accounts receivable (d) Depreciation expense (e) Common stock. Answer as a JSON array of the correct letters, e.g. [\"a\", \"b\"].",
+      "answer": "[\"b\", \"d\"]",
+      "type": "list",
+      "tags": ["accounting", "financial-statements"],
+      "notes": "COGS and depreciation expense are income statement items; retained earnings, accounts receivable, and common stock are balance sheet items."
+    },
+    {
+      "id": "q24",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Under U.S. GAAP, which of the following are classified as financing activities in the statement of cash flows? (a) Proceeds from issuing bonds (b) Purchase of equipment (c) Payment of dividends to shareholders (d) Collection of accounts receivable (e) Repurchase of common stock. Answer as a JSON array of the correct letters, e.g. [\"a\", \"b\"].",
+      "answer": "[\"a\", \"c\", \"e\"]",
+      "type": "list",
+      "tags": ["cash-flow-statement", "accounting"],
+      "notes": "Issuing bonds, paying dividends, and repurchasing stock are financing; equipment purchase is investing; collecting receivables is operating."
+    }
+  ]
+}

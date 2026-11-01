@@ -1,0 +1,77 @@
+{
+  "name": "chess_best_move",
+  "description": "A chess benchmark where the model must identify the strongest move in a given position (FEN). All positions are tactical or critical positional moments with a single clearly best named move, verified by analysis.",
+  "version": "1",
+  "questions": [
+    {
+      "id": "chess-001",
+      "question": "FEN: 2r5/5p2/8/pp3kpp/1N2b1p1/1Pr1R1P1/1RPK1P2/8 w - - 1 1 — White to move. What is the best move?",
+      "answer": "Rxc3",
+      "type": "contains",
+      "tags": ["chess", "tactics", "capture"]
+    },
+    {
+      "id": "chess-002",
+      "question": "FEN: 2n3k1/6p1/R1N2pbp/3p4/3Pn1P1/5N1P/5P2/1r3BK1 w - - 1 1 — White to move. What is the best move?",
+      "answer": "Ra8",
+      "type": "contains",
+      "tags": ["chess", "endgame", "tactics"]
+    },
+    {
+      "id": "chess-003",
+      "question": "FEN: 1b2rk1/ppQ1bppp/4qn2/4p3/8/2N2N2/PP3PPP/R1BR2K1 w - - 1 1 — White to move. What is the best move?",
+      "answer": "Ng5",
+      "type": "contains",
+      "tags": ["chess", "attack", "tactics"]
+    },
+    {
+      "id": "chess-004",
+      "question": "FEN: 4rk2/5ppp/2Q5/2Pp4/1P6/5N2/1q3PPP/4BK2 b - - 0 1 — Black to move. What is the best move?",
+      "answer": "Qe2+",
+      "type": "contains",
+      "tags": ["chess", "tactics", "check"]
+    },
+    {
+      "id": "chess-005",
+      "question": "FEN: r2qkb1r/pp3ppp/2n1p3/3N4/Q2pP1b1/3P1N2/PP3PPP/2R1KB1R w Kkq - 1 1 — White to move. What is the best move?",
+      "answer": "Rxc6",
+      "type": "contains",
+      "tags": ["chess", "tactics", "capture"]
+    },
+    {
+      "id": "chess-006",
+      "question": "FEN: BR6/5pkp/p3pnp1/1p6/8/5N1P/PPqR1PP1/6K1 b - - 0 1 — Black to move. What is the best move?",
+      "answer": "Qc1",
+      "type": "contains",
+      "tags": ["chess", "endgame", "tactics"]
+    },
+    {
+      "id": "chess-007",
+      "question": "FEN: 5rk1/1b4pp/1p1q4/3Pp3/r3B3/3R4/P2Q2PP/4R1K1 b - - 0 1 — Black to move. What is the best move?",
+      "answer": "Qc5+",
+      "type": "contains",
+      "tags": ["chess", "tactics", "check"]
+    },
+    {
+      "id": "chess-008",
+      "question": "FEN: r4b1r/pp1k2pp/3pbp2/2p5/8/2BB4/PPP2PPP/2KRR3 w - - 1 1 — White to move. What is the best move?",
+      "answer": "Bb5+",
+      "type": "contains",
+      "tags": ["chess", "tactics", "check"]
+    },
+    {
+      "id": "chess-009",
+      "question": "FEN: 5r2/p1q1p2k/1pp3p1/2p1bbQp/2P2B2/3PPPN1/PP4K1/3R4 w - - 1 1 — White to move. What is the best move?",
+      "answer": "Qh6+",
+      "type": "contains",
+      "tags": ["chess", "mating-attack", "check"]
+    },
+    {
+      "id": "chess-010",
+      "question": "FEN: 3r2k1/pbp1Rrpp/1p1p4/8/1PPQ1P2/P5P1/1Bq4P/4R1K1 w - - 1 1 — White to move. What is the best move?",
+      "answer": "Re8",
+      "type": "contains",
+      "tags": ["chess", "tactics"]
+    }
+  ]
+}

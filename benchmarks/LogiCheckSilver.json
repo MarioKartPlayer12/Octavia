@@ -1,0 +1,129 @@
+{
+  "name": "logichecksilver",
+  "description": "A suite of 17 propositional logic questions testing truth-table evaluation, logical equivalence, validity, satisfiability, and short natural-deduction style reasoning. Answers include truth values, counts of satisfying assignments, model sets, and short conclusions.",
+  "version": "1",
+  "questions": [
+    {
+      "id": "lcs-01",
+      "question": "Evaluate: given P is true and Q is false, what is the truth value of (P AND Q) OR P?",
+      "answer": "true",
+      "type": "exact",
+      "tags": ["truth-table", "basic"],
+      "notes": "Warm-up evaluation."
+    },
+    {
+      "id": "lcs-02",
+      "question": "Evaluate: given P is false, what is the truth value of NOT P OR (P AND Q)?",
+      "answer": "true",
+      "type": "exact",
+      "tags": ["truth-table", "negation"]
+    },
+    {
+      "id": "lcs-03",
+      "question": "How many satisfying assignments does the formula (P OR Q) AND (NOT P OR NOT Q) have over variables P and Q?",
+      "answer": 2,
+      "type": "numeric",
+      "tolerance": 0,
+      "tags": ["satisfiability", "counting"]
+    },
+    {
+      "id": "lcs-04",
+      "question": "Is the argument 'P implies Q. P. Therefore Q.' valid? Answer yes or no.",
+      "answer": "yes",
+      "type": "exact",
+      "tags": ["validity", "modus-ponens"]
+    },
+    {
+      "id": "lcs-05",
+      "question": "Is the argument 'P implies Q. Q. Therefore P.' valid? Answer yes or no.",
+      "answer": "no",
+      "type": "exact",
+      "tags": ["validity", "affirming-consequent"]
+    },
+    {
+      "id": "lcs-06",
+      "question": "Are the formulas NOT(P AND Q) and (NOT P OR NOT Q) logically equivalent? Answer yes or no.",
+      "answer": "yes",
+      "type": "exact",
+      "tags": ["equivalence", "de-morgan"]
+    },
+    {
+      "id": "lcs-07",
+      "question": "Are the formulas NOT(P OR Q) and (NOT P AND NOT Q) logically equivalent? Answer yes or no.",
+      "answer": "yes",
+      "type": "exact",
+      "tags": ["equivalence", "de-morgan"]
+    },
+    {
+      "id": "lcs-08",
+      "question": "Are the formulas P IMPLIES Q and Q IMPLIES P logically equivalent? Answer yes or no.",
+      "answer": "no",
+      "type": "exact",
+      "tags": ["equivalence", "converse"]
+    },
+    {
+      "id": "lcs-09",
+      "question": "How many rows of the truth table for (P AND Q) OR (NOT P AND NOT Q) evaluate to true?",
+      "answer": 2,
+      "type": "numeric",
+      "tolerance": 0,
+      "tags": ["truth-table", "counting", "biconditional"]
+    },
+    {
+      "id": "lcs-10",
+      "question": "Is the formula (P IMPLIES Q) AND (P AND NOT Q) satisfiable? Answer yes or no.",
+      "answer": "no",
+      "type": "exact",
+      "tags": ["satisfiability", "contradiction"]
+    },
+    {
+      "id": "lcs-11",
+      "question": "Is the formula (P IMPLIES Q) OR (Q IMPLIES P) a tautology? Answer yes or no.",
+      "answer": "yes",
+      "type": "exact",
+      "tags": ["tautology", "implication"]
+    },
+    {
+      "id": "lcs-12",
+      "question": "Given premises: P implies Q, Q implies R, and P. What must be true? Answer with the single derived formula.",
+      "answer": "R",
+      "type": "exact",
+      "tags": ["inference", "chain"]
+    },
+    {
+      "id": "lcs-13",
+      "question": "Given premises: P OR Q, NOT P. What can be concluded? Answer with the single derived formula.",
+      "answer": "Q",
+      "type": "exact",
+      "tags": ["inference", "disjunctive-syllogism"]
+    },
+    {
+      "id": "lcs-14",
+      "question": "Given premises: P implies Q, NOT Q. What can be concluded? Answer with the single derived formula.",
+      "answer": "not p",
+      "type": "contains",
+      "tags": ["inference", "modus-tollens"]
+    },
+    {
+      "id": "lcs-15",
+      "question": "List all truth assignments (as ordered pairs P,Q using T/F) that satisfy the formula P XOR Q.",
+      "answer": ["T,F", "F,T"],
+      "type": "list",
+      "tags": ["models", "xor"]
+    },
+    {
+      "id": "lcs-16",
+      "question": "If P implies Q is false, what are the truth values of P and Q respectively? Answer as a pair like 'P=true, Q=false'.",
+      "answer": "P=true, Q=false",
+      "type": "fuzzy",
+      "tags": ["implication", "truth-conditions"]
+    },
+    {
+      "id": "lcs-17",
+      "question": "Is the argument 'P OR Q. NOT P. Therefore NOT Q.' valid? Answer yes or no.",
+      "answer": "no",
+      "type": "exact",
+      "tags": ["validity", "disjunction"]
+    }
+  ]
+}

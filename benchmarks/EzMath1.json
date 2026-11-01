@@ -1,0 +1,130 @@
+
+{
+  "name": "HilbertMana",
+  "description": "Mathematical reasoning benchmark covering arithmetic, algebra, geometry, calculus, and number theory.",
+  "version": "1",
+  "created_at": "2026-09-21T12:00:00Z",
+  "questions": [
+    {
+      "id": "H1",
+      "question": "What is the sum of the integers from 1 to 100 inclusive?",
+      "answer": "5050",
+      "type": "exact",
+      "tags": ["math", "arithmetic", "series"],
+      "notes": "Gauss trick: n(n+1)/2 = 100*101/2 = 5050"
+    },
+    {
+      "id": "H2",
+      "question": "Find the roots of the equation x^2 - 5x + 6 = 0.",
+      "answer": "x = 2 and x = 3",
+      "type": "contains",
+      "tags": ["math", "algebra", "quadratic"],
+      "notes": "Factor: (x-2)(x-3) = 0"
+    },
+    {
+      "id": "H3",
+      "question": "What is the value of pi rounded to 5 decimal places?",
+      "answer": "3.14159",
+      "type": "contains",
+      "tags": ["math", "constants"],
+      "notes": "Mathematical constant"
+    },
+    {
+      "id": "H4",
+      "question": "What is the derivative of f(x) = x^3 with respect to x?",
+      "answer": "3x^2",
+      "type": "contains",
+      "tags": ["math", "calculus", "derivative"],
+      "notes": "Power rule: d/dx[x^n] = n*x^(n-1)"
+    },
+    {
+      "id": "H5",
+      "question": "Compute the product 17 * 23.",
+      "answer": "391",
+      "type": "exact",
+      "tags": ["math", "arithmetic"],
+      "notes": "Multiplication"
+    },
+    {
+      "id": "H6",
+      "question": "Solve the linear equation 2x + 7 = 15 for x.",
+      "answer": "x = 4",
+      "type": "contains",
+      "tags": ["math", "algebra", "linear"],
+      "notes": "x = (15-7)/2 = 4"
+    },
+    {
+      "id": "H7",
+      "question": "What is the area of a circle with radius 5? Use pi ≈ 3.14159.",
+      "answer": "78.54",
+      "type": "numeric",
+      "tolerance": 0.05,
+      "tags": ["math", "geometry", "circle"],
+      "notes": "A = pi * r^2 ≈ 3.14159 * 25 = 78.54"
+    },
+    {
+      "id": "H8",
+      "question": "What is the greatest common divisor of 48 and 36?",
+      "answer": "12",
+      "type": "exact",
+      "tags": ["math", "number-theory", "gcd"],
+      "notes": "Euclidean algorithm"
+    },
+    {
+      "id": "H9",
+      "question": "What is 2 raised to the power of 10?",
+      "answer": "1024",
+      "type": "exact",
+      "tags": ["math", "exponents"],
+      "notes": "Powers of 2"
+    },
+    {
+      "id": "H10",
+      "question": "A right triangle has legs of length 3 and 4. What is the length of the hypotenuse?",
+      "answer": "5",
+      "type": "exact",
+      "tags": ["math", "geometry", "pythagorean"],
+      "notes": "3-4-5 Pythagorean triple"
+    },
+    {
+      "id": "H11",
+      "question": "What is the value of the infinite geometric sum 1 + 1/2 + 1/4 + 1/8 + ... ?",
+      "answer": "2",
+      "type": "exact",
+      "tags": ["math", "series", "geometric"],
+      "notes": "Sum = a/(1-r) = 1/(1-1/2) = 2"
+    },
+    {
+      "id": "H12",
+      "question": "How many prime numbers are there that are less than 20?",
+      "answer": "8",
+      "type": "exact",
+      "tags": ["math", "number-theory", "primes"],
+      "notes": "Primes < 20: 2, 3, 5, 7, 11, 13, 17, 19 = 8"
+    },
+    {
+      "id": "H13",
+      "question": "What is the next number in the Fibonacci sequence: 1, 1, 2, 3, 5, 8, ?",
+      "answer": "13",
+      "type": "exact",
+      "tags": ["math", "sequences", "fibonacci"],
+      "notes": "Each number is the sum of the previous two: 5+8=13"
+    },
+    {
+      "id": "H14",
+      "question": "Compute the determinant of the 2x2 matrix with rows [3, 8] and [4, 6].",
+      "answer": "-14",
+      "type": "exact",
+      "tags": ["math", "linear-algebra"],
+      "notes": "det = 3*6 - 8*4 = 18 - 32 = -14"
+    },
+    {
+      "id": "H15",
+      "question": "What is the antiderivative (integral) of 2x with respect to x?",
+      "answer": "x^2",
+      "type": "contains",
+      "tags": ["math", "calculus", "integration"],
+      "notes": "Integral of 2x dx = x^2 + C"
+    }
+  ]
+}

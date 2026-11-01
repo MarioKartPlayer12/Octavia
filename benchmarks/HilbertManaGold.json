@@ -1,0 +1,153 @@
+
+{
+  "name": "hilbertmana_proofbench",
+  "description": "A highly complex mathematics benchmark testing advanced reasoning across real analysis, abstract algebra, number theory, combinatorics, linear algebra, and mathematical logic. Questions require multi-step proofs, careful computation, and precise final answers rather than pattern matching.",
+  "version": "1",
+  "questions": [
+    {
+      "id": "q01",
+      "question": "Compute the sum of the series: sum from n=1 to infinity of 1/n^4. Give the answer in terms of pi.",
+      "answer": "pi^4/90",
+      "type": "contains",
+      "tags": ["analysis", "series"],
+      "notes": "Classic zeta(4) evaluation via Fourier series or Euler's method."
+    },
+    {
+      "id": "q02",
+      "question": "Let f(x) = x^2 * sin(1/x) for x != 0 and f(0) = 0. Is f differentiable at x = 0? Answer yes or no.",
+      "answer": "yes",
+      "type": "exact",
+      "tags": ["analysis", "differentiability"],
+      "notes": "f'(0) = lim h->0 h*sin(1/h) = 0, so differentiable, though f' is not continuous at 0."
+    },
+    {
+      "id": "q03",
+      "question": "How many elements of order 7 does the symmetric group S_7 have?",
+      "answer": "720",
+      "type": "numeric",
+      "tolerance": 0,
+      "tags": ["algebra", "group-theory"],
+      "notes": "7-cycles: 7!/7 = 720; each 7-cycle has 6 powers of order 7, so 720*6/... actually count cycles: number of 7-cycles = 6! = 720, each generates a subgroup with 6 elements of order 7, giving 720*6/6 = 720? Correct count: 720 7-cycles, each is an element of order 7, so answer is 720."
+    },
+    {
+      "id": "q04",
+      "question": "What is the remainder when 2^1000 is divided by 1000?",
+      "answer": "376",
+      "type": "numeric",
+      "tolerance": 0,
+      "tags": ["number-theory", "modular-arithmetic"],
+      "notes": "CRT: mod 8 gives 0, mod 125 gives 2^1000 mod 125 = 376 mod 125 = 1... combine to get 376."
+    },
+    {
+      "id": "q05",
+      "question": "State the rank of a 5x7 matrix over R whose null space has dimension 3.",
+      "answer": "4",
+      "type": "numeric",
+      "tolerance": 0,
+      "tags": ["linear-algebra"],
+      "notes": "Rank-nullity: rank = 7 - 3 = 4? No: nullity applies to columns, rank = 7 - 3 = 4."
+    },
+    {
+      "id": "q06",
+      "question": "How many spanning trees does the complete graph K_4 have?",
+      "answer": "16",
+      "type": "numeric",
+      "tolerance": 0,
+      "tags": ["combinatorics", "graph-theory"],
+      "notes": "Cayley's formula: n^(n-2) = 4^2 = 16."
+    },
+    {
+      "id": "q07",
+      "question": "Evaluate the integral of e^{-x^2} from -infinity to infinity.",
+      "answer": "sqrt(pi)",
+      "type": "contains",
+      "tags": ["analysis", "integration"],
+      "notes": "Gaussian integral."
+    },
+    {
+      "id": "q08",
+      "question": "What is the smallest positive integer that is expressible as the sum of two positive cubes in two distinct ways?",
+      "answer": "1729",
+      "type": "numeric",
+      "tolerance": 0,
+      "tags": ["number-theory"],
+      "notes": "Taxicab(2): 1^3 + 12^3 = 9^3 + 10^3 = 1729."
+    },
+    {
+      "id": "q09",
+      "question": "Let A be a 3x3 real matrix with eigenvalues 1, 2, 3. What is the determinant of A^2 + I?",
+      "answer": "100",
+      "type": "numeric",
+      "tolerance": 0,
+      "tags": ["linear-algebra"],
+      "notes": "Eigenvalues of A^2+I are 2, 5, 10; determinant = 100."
+    },
+    {
+      "id": "q10",
+      "question": "In how many ways can 10 identical candies be distributed among 4 children so that each child gets at least one candy?",
+      "answer": "84",
+      "type": "numeric",
+      "tolerance": 0,
+      "tags": ["combinatorics"],
+      "notes": "Stars and bars: C(9,3) = 84."
+    },
+    {
+      "id": "q11",
+      "question": "Is the set of all 2x2 real matrices with determinant equal to 1, under matrix multiplication, a group? Answer yes or no.",
+      "answer": "yes",
+      "type": "exact",
+      "tags": ["algebra", "group-theory"],
+      "notes": "SL(2, R) is a group."
+    },
+    {
+      "id": "q12",
+      "question": "Compute the limit as n approaches infinity of (1 + 1/n)^n.",
+      "answer": "e, Eulers number or 2.718...",
+      "type": "exact",
+      "tags": ["analysis", "limits"],
+      "notes": "Definition of Euler's number."
+    },
+    {
+      "id": "q13",
+      "question": "What is the largest prime factor of 2^11 - 1?",
+      "answer": "2047 = 23 * 89, so the largest prime factor is 89",
+      "type": "contains",
+      "tags": ["number-theory"],
+      "notes": "Mersenne number 2047 is composite."
+    },
+    {
+      "id": "q14",
+      "question": "How many subgroups does the cyclic group Z_12 have?",
+      "answer": "6",
+      "type": "numeric",
+      "tolerance": 0,
+      "tags": ["algebra", "group-theory"],
+      "notes": "One subgroup per divisor of 12: d = 1, 2, 3, 4, 6, 12."
+    },
+    {
+      "id": "q15",
+      "question": "What is the probability of getting exactly 3 heads in 5 fair coin flips? Give a decimal answer.",
+      "answer": "0.3125, .3125, 0.31250, or ≈ 0.31",
+      "type": "numeric",
+      "tolerance": 0.001,
+      "tags": ["probability", "combinatorics"],
+      "notes": "C(5,3)/32 = 10/32."
+    },
+    {
+      "id": "q16",
+      "question": "Granting Axiom of Choice, Which of the following statements are true? (a) Every vector space has a basis. (b) Every set can be well-ordered. (c) There exists an uncountable set with countably infinite cardinality. Answer as a JSON array of the true statements, e.g. [\"a\", \"b\"].",
+      "answer": "[\"a\", \"b\"]",
+      "type": "list",
+      "tags": ["logic", "set-theory"],
+      "notes": "(a) requires AC, (b) is equivalent to AC, (c) is a contradiction."
+    },
+    {
+      "id": "q17",
+      "question": "Compute the value of the continued fraction [1; 2, 2, 2, 2] (i.e., 1 + 1/(2 + 1/(2 + 1/(2 + 1/2)))). Give your answer as a fraction p/q.",
+      "answer": "41/29",
+      "type": "exact",
+      "tags": ["number-theory", "continued-fractions"],
+      "notes": "Convergents of sqrt(2)-related continued fraction: compute bottom-up: 2 + 1/2 = 5/2; 2 + 2/5 = 12/5; 2 + 5/12 = 29/12; 1 + 12/29 = 41/29. Recheck: answer is 41/29."
+    }
+  ]
+}

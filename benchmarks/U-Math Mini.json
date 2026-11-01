@@ -1,0 +1,141 @@
+{
+  "name": "u_math_mini",
+  "description": "A mini benchmark of university-level math problems (multivariable calculus, integral calculus, differential calculus, sequences and series, algebra, and precalculus) converted from the U-Math dataset. Answers are graded with fuzzy matching since most expected answers are symbolic LaTeX expressions.",
+  "version": "1",
+  "questions": [
+    {
+      "id": "umath-mini-001",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Determine the coordinates, if any, for which $f(x,y) = 6 \\cdot x^2 - 3 \\cdot x^2 \\cdot y + y^3 + 12$ has 1. a Relative Minimum(s) 2. a Relative Maximum(s) 3. a Saddle Point(s). If a Relative Minimum or Maximum, find the Minimum or Maximum value. If none, enter None.",
+      "answer": "1. The function $f(x,y)$ has Relative Minimum(s) at None with the value(s) None\n2. The function $f(x,y)$ has Relative Maximum(s) at None with the value(s) None\n3. The function $f(x,y)$ has a Saddle Point(s) at $P(-2,2)$, $P(2,2)$",
+      "type": "fuzzy",
+      "tags": ["multivariable_calculus", "optimization"]
+    },
+    {
+      "id": "umath-mini-002",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Evaluate the integral by choosing the order of integration:\n$$\n\\int_{0}^1 \\int_{1}^2 \\left(\\frac{ y }{ x+y^2 }\\right) \\, dy \\, dx\n$$",
+      "answer": "$\\ln\\left(\\frac{25\\cdot\\sqrt{5}}{32}\\right)$",
+      "type": "fuzzy",
+      "tags": ["multivariable_calculus", "integration"]
+    },
+    {
+      "id": "umath-mini-003",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Solve the integral:\n$$\n\\int \\frac{ 1 }{ \\sin(x)^7 \\cdot \\cos(x) } \\, dx\n$$",
+      "answer": "$C+\\ln\\left(\\left|\\tan(x)\\right|\\right)-\\frac{3}{2\\cdot\\left(\\tan(x)\\right)^2}-\\frac{3}{4\\cdot\\left(\\tan(x)\\right)^4}-\\frac{1}{6\\cdot\\left(\\tan(x)\\right)^6}$",
+      "type": "fuzzy",
+      "tags": ["integral_calc", "integration"]
+    },
+    {
+      "id": "umath-mini-004",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Find the Fourier series of the periodic function $f(x) = x^2$ in the interval $-2 \\cdot \\pi \\leq x < 2 \\cdot \\pi$ if $f(x) = f(x + 4 \\cdot \\pi)$.",
+      "answer": "$\\frac{4\\cdot\\pi^2}{3}+\\sum_{n=1}^\\infty\\left(\\frac{16\\cdot(-1)^n}{n^2}\\cdot\\cos\\left(\\frac{n\\cdot x}{2}\\right)\\right)$",
+      "type": "fuzzy",
+      "tags": ["sequences_series", "fourier"]
+    },
+    {
+      "id": "umath-mini-005",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: If $z = x \\cdot y \\cdot e^{\\frac{ x }{ y }}$, $x = r \\cdot \\cos\\left(\\theta\\right)$, $y = r \\cdot \\sin\\left(\\theta\\right)$, find $\\frac{ d z }{d r}$ and $\\frac{ d z }{d \\theta}$ when $r = 2$ and $\\theta = \\frac{ \\pi }{ 6 }$.",
+      "answer": "$\\frac{ d z }{d r}$: $\\sqrt{3}\\cdot e^{\\left(\\sqrt{3}\\right)}$\n\n$\\frac{ d z }{d \\theta}$: $2\\cdot e^{\\left(\\sqrt{3}\\right)}-4\\cdot\\sqrt{3}\\cdot e^{\\left(\\sqrt{3}\\right)}$",
+      "type": "fuzzy",
+      "tags": ["multivariable_calculus", "chain_rule"]
+    },
+    {
+      "id": "umath-mini-006",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Consider the function $y = \\left| \\cos\\left( \\frac{ x }{ 8 } \\right) \\right|$.\n\n1. Find the Fourier series of the function.\n2. Using this decomposition, calculate the sum of the series $\\sum_{n=1}^\\infty \\frac{ (-1)^n }{ 4 \\cdot n^2 - 1 }$.\n3. Using this decomposition, calculate the sum of the series $\\sum_{n=1}^\\infty \\frac{ 1 }{ 4 \\cdot n^2 - 1 }$.",
+      "answer": "1. The Fourier series is $\\frac{2}{\\pi}-\\frac{4}{\\pi}\\cdot\\sum_{n=1}^\\infty\\left(\\frac{(-1)^n}{\\left(4\\cdot n^2-1\\right)}\\cdot\\cos\\left(\\frac{n\\cdot x}{4}\\right)\\right)$\n2. The sum of the series $\\sum_{n=1}^\\infty \\frac{ (-1)^n }{ 4 \\cdot n^2 - 1 }$ is $\\frac{(2-\\pi)}{4}$\n3. The sum of the series $\\sum_{n=1}^\\infty \\frac{ 1 }{ 4 \\cdot n^2 - 1 }$ is $\\frac{1}{2}$",
+      "type": "fuzzy",
+      "tags": ["sequences_series", "fourier"]
+    },
+    {
+      "id": "umath-mini-007",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: For the function $r = \\arctan\\left(\\frac{ m }{ \\varphi }\\right) + \\arccot\\left(m \\cdot \\cot(\\varphi)\\right)$, find the derivative $r'(0)$ and $r'(2 \\cdot \\pi)$. Submit as your final answer:\n\n1. $r'(0)$\n2. $r'(2 \\cdot \\pi)$",
+      "answer": "1. $0$\n2. $\\frac{1}{m}-\\frac{m}{m^2+4\\cdot\\pi^2}$",
+      "type": "fuzzy",
+      "tags": ["differential_calc", "derivatives"]
+    },
+    {
+      "id": "umath-mini-008",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Rewrite the quadratic expression $x^2 + \\frac{ 2 }{ 3 } \\cdot x - \\frac{ 1 }{ 3 }$ by completing the square.",
+      "answer": "$\\left(x+\\frac{1}{3}\\right)^2-\\frac{4}{9}$",
+      "type": "fuzzy",
+      "tags": ["algebra", "completing_the_square"]
+    },
+    {
+      "id": "umath-mini-009",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Using the Taylor formula, decompose the function $f(x) = \\ln(1+4 \\cdot x)$ in powers of the variable $x$ on the segment $[0,1]$. Use the first nine terms.\n\nThen estimate the accuracy obtained by dropping an additional term after the first nine terms.",
+      "answer": "1. $\\ln(1+4 \\cdot x)$ = $4\\cdot x-\\frac{(4\\cdot x)^2}{2}+\\frac{(4\\cdot x)^3}{3}-\\frac{(4\\cdot x)^4}{4}+\\frac{(4\\cdot x)^5}{5}-\\frac{(4\\cdot x)^6}{6}+\\frac{(4\\cdot x)^7}{7}-\\frac{(4\\cdot x)^8}{8}+\\frac{(4\\cdot x)^9}{9}$\n2. Accuracy is not more than $\\frac{4^{10}}{10}$",
+      "type": "fuzzy",
+      "tags": ["sequences_series", "taylor_series"]
+    },
+    {
+      "id": "umath-mini-010",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Compute the limit:\n$$\n\\lim_{x \\to 0}\\left(\\frac{ x-x \\cdot \\cos(x) }{ x-\\sin(x) }\\right)\n$$",
+      "answer": "3",
+      "type": "numeric",
+      "tolerance": 0.01,
+      "tags": ["differential_calc", "limits"]
+    },
+    {
+      "id": "umath-mini-011",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Compute the derivative of the function $y = \\sqrt{\\frac{ x^5 \\cdot \\left(2 \\cdot x^6+3\\right) }{ \\sqrt[3]{1-2 \\cdot x} }}$ by taking the natural log of both sides of the equation.",
+      "answer": "$y'=\\frac{-128\\cdot x^7+66\\cdot x^6-84\\cdot x+45}{-24\\cdot x^8+12\\cdot x^7-36\\cdot x^2+18\\cdot x}\\cdot\\sqrt{\\frac{x^5\\cdot\\left(2\\cdot x^6+3\\right)}{\\sqrt[3]{1-2\\cdot x}}}$",
+      "type": "fuzzy",
+      "tags": ["differential_calc", "logarithmic_differentiation"]
+    },
+    {
+      "id": "umath-mini-012",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: 1. On a map, the scale is 1/2 inch : 25 miles. What is the actual distance between two cities that are 3 inches apart?\n\n2. What are the dimensions of a 15 foot by 10 foot room on a blueprint with a scale of 1.5 inches : 2 feet?\n\n3. The distance between Newark, NJ and San Francisco, CA is 2,888 miles. How far would that measure on a map with a scale of 3 cm to 1,000 miles?\n\n4. If the scale for a model train is 1 inch for every 10 feet of a real train, how big is the model for an 83-foot train?",
+      "answer": "1. $150$ miles\n\n2. $11.25$ feet by $7.5$ feet\n\n3. $8.664$ cm\n\n4. $8.3$ inches",
+      "type": "fuzzy",
+      "tags": ["algebra", "proportions"]
+    },
+    {
+      "id": "umath-mini-013",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Find the radius of convergence $R$ and interval of convergence for the power series:\n$$\n\\sum_{n=1}^\\infty (-1)^n \\cdot \\frac{ x^n }{ \\ln(2 \\cdot n) }\n$$",
+      "answer": "$R$ = $1$\n$I$ = $(-1,1]$",
+      "type": "fuzzy",
+      "tags": ["sequences_series", "power_series"]
+    },
+    {
+      "id": "umath-mini-014",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Sketch the curve:\n\n$$\ny = 16 \\cdot x^2 \\cdot e^{\\frac{ 1 }{ 4 \\cdot x }}\n$$\n\nSubmit as your final answer:\n\n1. The domain (in interval notation)\n2. Vertical asymptotes\n3. Horizontal asymptotes\n4. Slant asymptotes\n5. Intervals where the function is increasing\n6. Intervals where the function is decreasing\n7. Intervals where the function is concave up\n8. Intervals where the function is concave down\n9. Points of inflection",
+      "answer": "1. The domain (in interval notation): $(-\\infty,0)\\cup(0,\\infty)$\n2. Vertical asymptotes: $x=0$\n3. Horizontal asymptotes: None\n4. Slant asymptotes: None\n5. Intervals where the function is increasing: $\\left(\\frac{1}{8},\\infty\\right)$\n6. Intervals where the function is decreasing: $\\left(0,\\frac{1}{8}\\right)$, $(-\\infty,0)$\n7. Intervals where the function is concave up: $(0,\\infty)$, $(-\\infty,0)$\n8. Intervals where the function is concave down: None\n9. Points of inflection: None",
+      "type": "fuzzy",
+      "tags": ["differential_calc", "curve_sketching"]
+    },
+    {
+      "id": "umath-mini-015",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Evaluate $L=\\lim_{P(x,y) \\to P\\left(1,\\frac{ 1 }{ 2 }\\right)}\\left(f(x,y)\\right)$ given $f(x,y) = \\frac{ x^2 - 2 \\cdot x^3 \\cdot y - 2 \\cdot x \\cdot y^3 + y^2 }{ 1 + x + y - 2 \\cdot x \\cdot y - 2 \\cdot x^2 \\cdot y - 2 \\cdot x \\cdot y^2 }$.",
+      "answer": "$L=\\frac{1}{2}$",
+      "type": "fuzzy",
+      "tags": ["multivariable_calculus", "limits"]
+    },
+    {
+      "id": "umath-mini-016",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Form the compositions $f\\left(g(x)\\right)$ and $g\\left(f(x)\\right)$ if $f(x) = \\sin(3 \\cdot x)$ and $g(x) = \\frac{ 1 }{ \\sqrt{2-x^2} }$.\n\n1. Find $f\\left(g(x)\\right)$ and $g\\left(f(x)\\right)$.\n2. Find the domain and range of $f\\left(g(x)\\right)$ and $g\\left(f(x)\\right)$.",
+      "answer": "1. $f\\left(g(x)\\right)$ = $\\sin\\left(\\frac{3}{\\sqrt{2-x^2}}\\right)$\n$g\\left(f(x)\\right)$ = $\\frac{1}{\\sqrt{2-\\sin(3\\cdot x)^2}}$\n\n2. Domain of $f\\left(g(x)\\right)$ is $\\left(-\\sqrt{2},\\sqrt{2}\\right)$\nRange of $f\\left(g(x)\\right)$ is $[-1,1]$\n\nDomain of $g\\left(f(x)\\right)$ is $(-\\infty,\\infty)$\nRange of $g\\left(f(x)\\right)$ is $\\left[\\frac{1}{\\sqrt{2}},1\\right]$",
+      "type": "fuzzy",
+      "tags": ["precalculus_review", "composition"]
+    },
+    {
+      "id": "umath-mini-017",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Sketch the curve:\n$y = 5 \\cdot x \\cdot \\sqrt{4-x^2}$.\nSubmit as your final answer:\n\n1. The domain (in interval notation)\n2. Vertical asymptotes\n3. Horizontal asymptotes\n4. Slant asymptotes\n5. Intervals where the function is increasing\n6. Intervals where the function is decreasing\n7. Intervals where the function is concave up\n8. Intervals where the function is concave down\n9. Points of inflection",
+      "answer": "1. The domain (in interval notation): $[-2,2]$\n2. Vertical asymptotes: None\n3. Horizontal asymptotes: None\n4. Slant asymptotes: None\n5. Intervals where the function is increasing: $\\left(-\\sqrt{2},\\sqrt{2}\\right)$\n6. Intervals where the function is decreasing: $\\left(-2,-\\sqrt{2}\\right)$, $\\left(\\sqrt{2},2\\right)$\n7. Intervals where the function is concave up: $(-2,0)$\n8. Intervals where the function is concave down: $(0,2)$\n9. Points of inflection: $P(0,0)$",
+      "type": "fuzzy",
+      "tags": ["differential_calc", "curve_sketching"]
+    },
+    {
+      "id": "umath-mini-018",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Solve the following equation:\n\n$$\nx^2 - x + 1 = \\frac{ 1 }{ 2 } + \\sqrt{x - \\frac{ 3 }{ 4 }}\n$$",
+      "answer": "$x=1$",
+      "type": "fuzzy",
+      "tags": ["precalculus_review", "equations"]
+    },
+    {
+      "id": "umath-mini-019",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Consider the function $f(x) = x^2$ on $[-1,1]$ and the partition $\\left\\{-1, -\\frac{ 1 }{ 2 }, \\frac{ 1 }{ 4 }, 1\\right\\}$. Find the upper and lower sums.",
+      "answer": "The upper sum is: $\\frac{23}{16}$\nThe lower sum is: $\\frac{11}{64}$",
+      "type": "fuzzy",
+      "tags": ["integral_calc", "riemann_sums"]
+    }
+  ]
+}

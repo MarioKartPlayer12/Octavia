@@ -1,0 +1,278 @@
+ 
+{
+  "name": "blackjack-optimal-play",
+  "description": "Thirty questions on optimal blackjack play. The strategy questions assume a 6-deck shoe, dealer stands on soft 17, double after split allowed, may double on any first two cards, no surrender, and no card counting unless the question says so. The counting questions use the Hi-Lo system (running count, true count, insurance decision, and deviation indices), and the final questions cover standard probabilities.",
+  "version": "1",
+  "questions": [
+    {
+      "id": "bj-01",
+      "question": "6-deck shoe, dealer stands on soft 17, double after split allowed, may double on any two cards, no surrender. You hold a hard 16 (10-6). Dealer's upcard is a 10. What is the correct basic-strategy play?",
+      "answer": "hit",
+      "type": "contains",
+      "tolerance": 0.01,
+      "tags": ["basic-strategy", "hard-totals"],
+      "notes": "16 vs 10 is a hit in multi-deck basic strategy."
+    },
+    {
+      "id": "bj-02",
+      "question": "6-deck shoe, dealer stands on soft 17, double after split allowed, no surrender. You hold a hard 12 (10-2). Dealer's upcard is a 3. What is the correct basic-strategy play?",
+      "answer": "hit",
+      "type": "contains",
+      "tolerance": 0.01,
+      "tags": ["basic-strategy", "hard-totals"],
+      "notes": "Hard 12 stands only against 4, 5, 6; hits against 2 and 3."
+    },
+    {
+      "id": "bj-03",
+      "question": "6-deck shoe, dealer stands on soft 17, double after split allowed, no surrender. You hold a hard 12 (10-2). Dealer's upcard is a 4. What is the correct basic-strategy play?",
+      "answer": "stand",
+      "type": "contains",
+      "tolerance": 0.01,
+      "tags": ["basic-strategy", "hard-totals"],
+      "notes": "Hard 12 vs 4 is a stand."
+    },
+    {
+      "id": "bj-04",
+      "question": "6-deck shoe, dealer stands on soft 17, double after split allowed, may double on any two cards, no surrender. You hold a hard 11 (6-5). Dealer's upcard is a 6. What is the correct basic-strategy play?",
+      "answer": "double",
+      "type": "contains",
+      "tolerance": 0.01,
+      "tags": ["basic-strategy", "hard-totals", "doubling"],
+      "notes": "Hard 11 doubles against dealer 2-10."
+    },
+    {
+      "id": "bj-05",
+      "question": "6-deck shoe, dealer stands on soft 17, double after split allowed, no surrender. You hold a soft 18: A-7. Dealer's upcard is a 3. What is the correct basic-strategy play?",
+      "answer": "double",
+      "type": "contains",
+      "tolerance": 0.01,
+      "tags": ["basic-strategy", "soft-totals", "doubling"],
+      "notes": "Soft 18 doubles against 3, 4, 5, 6; stands against 2, 7 and 8; hits against 9, 10, A."
+    },
+    {
+      "id": "bj-06",
+      "question": "6-deck shoe, dealer stands on soft 17, double after split allowed, no surrender. You hold a soft 18: A-7. Dealer's upcard is a 9. What is the correct basic-strategy play?",
+      "answer": "hit",
+      "type": "contains",
+      "tolerance": 0.01,
+      "tags": ["basic-strategy", "soft-totals"],
+      "notes": "Soft 18 hits against 9, 10 and A."
+    },
+    {
+      "id": "bj-07",
+      "question": "6-deck shoe, dealer stands on soft 17, double after split allowed, no surrender. You hold a soft 17: A-6. Dealer's upcard is a 2. What is the correct basic-strategy play?",
+      "answer": "hit",
+      "type": "contains",
+      "tolerance": 0.01,
+      "tags": ["basic-strategy", "soft-totals"],
+      "notes": "Soft 17 doubles only against 3-6; hits against 2, 7, 8, 9, 10, A."
+    },
+    {
+      "id": "bj-08",
+      "question": "6-deck shoe, dealer stands on soft 17, double after split allowed, no surrender. You hold a soft 13: A-2. Dealer's upcard is a 5. What is the correct basic-strategy play?",
+      "answer": "double",
+      "type": "contains",
+      "tolerance": 0.01,
+      "tags": ["basic-strategy", "soft-totals", "doubling"],
+      "notes": "Soft 13-14 double against 5 and 6."
+    },
+    {
+      "id": "bj-09",
+      "question": "6-deck shoe, dealer stands on soft 17, double after split allowed, no surrender. You hold a soft 19: A-8. Dealer's upcard is a 6. What is the correct basic-strategy play?",
+      "answer": "stand",
+      "type": "contains",
+      "tolerance": 0.01,
+      "tags": ["basic-strategy", "soft-totals"],
+      "notes": "Soft 19 always stands when the dealer stands on soft 17."
+    },
+    {
+      "id": "bj-10",
+      "question": "6-deck shoe, dealer stands on soft 17, double after split allowed, no surrender. You are dealt A-A. Dealer's upcard is an Ace. What is the correct basic-strategy play?",
+      "answer": "split",
+      "type": "contains",
+      "tolerance": 0.01,
+      "tags": ["basic-strategy", "pairs", "splitting"],
+      "notes": "Aces are always split."
+    },
+    {
+      "id": "bj-11",
+      "question": "6-deck shoe, dealer stands on soft 17, double after split allowed, no surrender. You are dealt 8-8. Dealer's upcard is a 10. What is the correct basic-strategy play?",
+      "answer": "split",
+      "type": "contains",
+      "tolerance": 0.01,
+      "tags": ["basic-strategy", "pairs", "splitting"],
+      "notes": "8-8 is always split, including against a 10 or an Ace."
+    },
+    {
+      "id": "bj-12",
+      "question": "6-deck shoe, dealer stands on soft 17, double after split allowed, no surrender. You are dealt 9-9. Dealer's upcard is a 7. What is the correct basic-strategy play?",
+      "answer": "stand",
+      "type": "contains",
+      "tolerance": 0.01,
+      "tags": ["basic-strategy", "pairs"],
+      "notes": "9-9 splits against 2-6, 8 and 9, but stands against 7, 10 and A."
+    },
+    {
+      "id": "bj-13",
+      "question": "6-deck shoe, dealer stands on soft 17, double after split allowed, no surrender. You are dealt 9-9. Dealer's upcard is a 9. What is the correct basic-strategy play?",
+      "answer": "split",
+      "type": "contains",
+      "tolerance": 0.01,
+      "tags": ["basic-strategy", "pairs", "splitting"],
+      "notes": "9-9 splits against 2-6, 8 and 9."
+    },
+    {
+      "id": "bj-14",
+      "question": "6-deck shoe, dealer stands on soft 17, double after split allowed, may double on any two cards, no surrender. You are dealt 5-5. Dealer's upcard is a 6. What is the correct basic-strategy play?",
+      "answer": "double",
+      "type": "contains",
+      "tolerance": 0.01,
+      "tags": ["basic-strategy", "pairs", "doubling"],
+      "notes": "5-5 is never split; it is played as a hard 10, which doubles against 2-9."
+    },
+    {
+      "id": "bj-15",
+      "question": "6-deck shoe, dealer stands on soft 17, double after split allowed, no surrender. You are dealt 3-3. Dealer's upcard is an 8. What is the correct basic-strategy play?",
+      "answer": "hit",
+      "type": "contains",
+      "tolerance": 0.01,
+      "tags": ["basic-strategy", "pairs"],
+      "notes": "3-3 splits against 2-7 and hits against 8, 9, 10, A."
+    },
+    {
+      "id": "bj-16",
+      "question": "6-deck shoe, dealer stands on soft 17, double after split allowed, no surrender. You are dealt 6-6. Dealer's upcard is a 7. What is the correct basic-strategy play?",
+      "answer": "hit",
+      "type": "contains",
+      "tolerance": 0.01,
+      "tags": ["basic-strategy", "pairs"],
+      "notes": "6-6 splits against 2-6 and hits against 7 and above."
+    },
+    {
+      "id": "bj-17",
+      "question": "6-deck shoe, dealer stands on soft 17, double after split allowed, no surrender. You are dealt 10-10. Dealer's upcard is a 6. What is the correct basic-strategy play?",
+      "answer": "stand",
+      "type": "contains",
+      "tolerance": 0.01,
+      "tags": ["basic-strategy", "pairs"],
+      "notes": "10-10 is never split under basic strategy."
+    },
+    {
+      "id": "bj-18",
+      "question": "You are playing basic strategy with no card counting. The dealer shows an Ace and offers insurance. Do you take insurance? Answer yes or no.",
+      "answer": "no",
+      "type": "exact",
+      "tolerance": 0.01,
+      "tags": ["basic-strategy", "insurance"],
+      "notes": "Insurance is a losing bet for a non-counter; basic strategy never takes it."
+    },
+    {
+      "id": "bj-19",
+      "question": "In the Hi-Lo card counting system, what point value is assigned to a 5? Give the numeric value.",
+      "answer": 1,
+      "type": "numeric",
+      "tolerance": 0.01,
+      "tags": ["card-counting", "hi-lo"],
+      "notes": "Low cards 2-6 count +1."
+    },
+    {
+      "id": "bj-20",
+      "question": "In the Hi-Lo card counting system, what point value is assigned to a 9? Give the numeric value.",
+      "answer": 0,
+      "type": "numeric",
+      "tolerance": 0.01,
+      "tags": ["card-counting", "hi-lo"],
+      "notes": "Neutral cards 7, 8, 9 count 0."
+    },
+    {
+      "id": "bj-21",
+      "question": "In the Hi-Lo card counting system, what point value is assigned to an Ace? Give the numeric value.",
+      "answer": -1,
+      "type": "numeric",
+      "tolerance": 0.01,
+      "tags": ["card-counting", "hi-lo"],
+      "notes": "High cards 10, J, Q, K, A count -1."
+    },
+    {
+      "id": "bj-22",
+      "question": "Using Hi-Lo, what is the running count after these cards are dealt: 5, K, 2, A, 7?",
+      "answer": 0,
+      "type": "numeric",
+      "tolerance": 0.01,
+      "tags": ["card-counting", "hi-lo", "arithmetic"],
+      "notes": "+1 -1 +1 -1 +0 = 0."
+    },
+    {
+      "id": "bj-23",
+      "question": "A Hi-Lo counter has a running count of +6 with 3 decks remaining to be dealt. What is the true count?",
+      "answer": 2,
+      "type": "numeric",
+      "tolerance": 0.01,
+      "tags": ["card-counting", "true-count"],
+      "notes": "True count = running count / decks remaining = 6 / 3 = 2."
+    },
+    {
+      "id": "bj-24",
+      "question": "A Hi-Lo counter has a running count of -9 with 4.5 decks remaining to be dealt. What is the true count?",
+      "answer": -2,
+      "type": "numeric",
+      "tolerance": 0.01,
+      "tags": ["card-counting", "true-count"],
+      "notes": "-9 / 4.5 = -2."
+    },
+    {
+      "id": "bj-25",
+      "question": "In the Hi-Lo counting system, which card ranks are counted as +1? Answer as a JSON array of strings, for example [\"A\",\"K\"].",
+      "answer": ["2", "3", "4", "5", "6"],
+      "type": "list",
+      "tolerance": 0.01,
+      "tags": ["card-counting", "hi-lo"],
+      "notes": "Low cards 2 through 6."
+    },
+    {
+      "id": "bj-26",
+      "question": "Using the Hi-Lo system, at what true count does a counter first take insurance? Give the numeric true count.",
+      "answer": 3,
+      "type": "numeric",
+      "tolerance": 0.01,
+      "tags": ["card-counting", "insurance", "deviations"],
+      "notes": "Standard Hi-Lo insurance index is +3."
+    },
+    {
+      "id": "bj-27",
+      "question": "Using Hi-Lo deviations in a 6-deck game, at what true count does a counter stand on hard 16 against a dealer 10 instead of hitting? Give the numeric true count.",
+      "answer": 0,
+      "type": "numeric",
+      "tolerance": 0.01,
+      "tags": ["card-counting", "deviations"],
+      "notes": "Illustrious 18: stand on 16 vs 10 at true count 0 or higher."
+    },
+    {
+      "id": "bj-28",
+      "question": "What is the approximate probability of busting when you hit a hard 16 in blackjack? Give the answer as a decimal.",
+      "answer": 0.615,
+      "type": "numeric",
+      "tolerance": 0.03,
+      "tags": ["probability"],
+      "notes": "About 8/13 = 61.5%: any 6, 7, 8, 9 or 10-value card busts the hand."
+    },
+    {
+      "id": "bj-29",
+      "question": "In a 6-deck game where the dealer stands on soft 17, what is the approximate probability that the dealer busts when the upcard is a 6? Give the answer as a decimal.",
+      "answer": 0.421,
+      "type": "numeric",
+      "tolerance": 0.035,
+      "tags": ["probability"],
+      "notes": "Dealer bust probability with a 6 up is about 42.1%."
+    },
+    {
+      "id": "bj-30",
+      "question": "What is the probability of being dealt a natural blackjack (an Ace plus a ten-value card) off the top of a freshly shuffled 6-deck shoe? Give the answer as a decimal.",
+      "answer": 0.0475,
+      "type": "numeric",
+      "tolerance": 0.006,
+      "tags": ["probability"],
+      "notes": "2 x (24/312) x (96/311) = 0.04749."
+    }
+  ]
+} 

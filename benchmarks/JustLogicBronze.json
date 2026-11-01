@@ -1,0 +1,191 @@
+{
+  "name": "justlogic_bronze",
+  "description": "JustLogicBronze is a compact 22-question deductive logic benchmark adapted from the JustLogic dataset, restricted to depth-1 reasoning. Each item presents natural-language premises and asks whether a claim is TRUE, FALSE, or Uncertain given only those premises. It covers core inference rules (Modus Ponens, Modus Tollens, Disjunctive Syllogism, Disjunction Elimination, Reductio Ad Absurdum) with heavy surface-form variation, including distractor claims that differ subtly from the entailed conclusion. Intended as an entry-level suite; scores should not be compared with deeper-reasoning logic benchmarks.",
+  "version": "1",
+  "questions": [
+    {
+      "id": "jl-001",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Premises: One may reasonably assume that if the statement that 'democracy helps people to protect their own fundamental interests' is incorrect, then pluralisms are doctrines. Provided that the statement that 'democracy helps people to protect their own fundamental interests' is incorrect, we know that some people mistakenly believe that pluralisms are doctrines. Based only on the premises, is the following claim TRUE, FALSE, or Uncertain? Claim: Those that suggest democracy helps people to protect their own fundamental interests are right.",
+      "answer": "TRUE",
+      "type": "exact",
+      "tags": ["reductio-ad-absurdum", "depth-1", "true"],
+      "notes": "Reductio: If (Not [0]), then [1]; If (Not [0]), then (Not [1]); therefore [0]. Statements: 0=Democracy helps people protect their own fundamental interests; 1=Pluralisms are doctrines."
+    },
+    {
+      "id": "jl-002",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Premises: At least one of two things is true: either basic competency is defined as reading, writing, mathematics, and science or excess prostaglandins make the smooth muscles contract, or either international health means two different, but related, things or statistics show that there are more women in the world than anything else - except insects. The claim that either basic competency is defined as reading, writing, mathematics, and science or excess prostaglandins make the smooth muscles contract has no merit. Based only on the premises, is the following claim TRUE, FALSE, or Uncertain? Claim: It is a fact that either international health means two different, but related, things or statistics come in many forms and interpretations.",
+      "answer": "Uncertain",
+      "type": "exact",
+      "tags": ["disjunctive-syllogism", "depth-1", "uncertain", "distractor"],
+      "notes": "Disjunctive Syllogism yields 'Either [0] or [1]' but the claim swaps statement 1 for a different statement ('statistics come in many forms'). Statements: 0=International health means two different, but related, things; 1=Statistics show there are more women than anything else except insects; 2=Basic competency definition; 3=Excess prostaglandins make smooth muscles contract."
+    },
+    {
+      "id": "jl-003",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Premises: There is good reason to believe that either nonviolent protest is one way of defending the autonomy of the people or most earwigs have scent glands. The statement 'nonviolent protest is one way of defending the autonomy of the people' can be considered false. Based only on the premises, is the following claim TRUE, FALSE, or Uncertain? Claim: Earwigs develop with a gradual metamorphosis from egg to nymph to adult.",
+      "answer": "Uncertain",
+      "type": "exact",
+      "tags": ["disjunctive-syllogism", "depth-1", "uncertain", "distractor"],
+      "notes": "Disjunctive Syllogism yields 'Most earwigs have scent glands' but the claim is about earwig metamorphosis — an unrelated statement. Statements: 0=Most earwigs have scent glands; 1=Nonviolent protest is one way of defending the autonomy of the people."
+    },
+    {
+      "id": "jl-004",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Premises: On the condition that masters track is a family sport, it is definitely the case that summer is subject to scorching heat while winter can be cold and rainy. Assuming masters track is a family sport, we know that some people mistakenly believe that summer is subject to scorching heat while winter can be cold and rainy. Based only on the premises, is the following claim TRUE, FALSE, or Uncertain? Claim: The statement that 'many states grant some level of legal immunity for reporting elder abuse' is incorrect.",
+      "answer": "Uncertain",
+      "type": "exact",
+      "tags": ["reductio-ad-absurdum", "depth-1", "uncertain", "distractor"],
+      "notes": "Reductio yields Not [0] (masters track is not a family sport), but the claim concerns elder abuse reporting immunity — unrelated. Statements: 0=Masters track is a family sport; 1=Summer is subject to scorching heat while winter can be cold and rainy."
+    },
+    {
+      "id": "jl-005",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Premises: It is rational to believe that either a hairstreak butterfly is a butterfly or selenium is an element. If a hairstreak butterfly is a butterfly, then hedges are located in backyards. One may reasonably assume that if selenium is an element, then hedges are located in backyards. Based only on the premises, is the following claim TRUE, FALSE, or Uncertain? Claim: It is not the case that hedges are located in backyards.",
+      "answer": "FALSE",
+      "type": "exact",
+      "tags": ["disjunction-elimination", "depth-1", "false"],
+      "notes": "Disjunction Elimination: Either [1] or [2]; If [1] then [0]; If [2] then [0]; therefore [0]. Statements: 0=Hedges are located in backyards; 1=A hairstreak butterfly is a butterfly; 2=Selenium is an element."
+    },
+    {
+      "id": "jl-006",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Premises: Once we know eastern maples have superior taste, we also know that the statement that states subterranean rivers provide a natural perennial irrigation system is false. The idea that eastern maples have superior taste is true. Based only on the premises, is the following claim TRUE, FALSE, or Uncertain? Claim: It is a common misconception that subterranean rivers flow underground in caves or caverns.",
+      "answer": "Uncertain",
+      "type": "exact",
+      "tags": ["modus-ponens", "depth-1", "uncertain", "distractor"],
+      "notes": "Modus Ponens yields Not [0] (subterranean rivers do NOT provide a natural perennial irrigation system), but the claim is about rivers flowing in caves — a different statement. Statements: 0=Subterranean rivers provide a natural perennial irrigation system; 1=Eastern maples have superior taste."
+    },
+    {
+      "id": "jl-007",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Premises: Either rays are the main predator of bay scallops or if phonology is concerned with the sounds of language, then digital duplicators are a convenient, low-cost copying solution. One may reasonably assume that if rays are the main predator of bay scallops, then gorillas are generally herbivores. On the condition that if phonology is concerned with the sounds of language, then digital duplicators are a convenient, low-cost copying solution, it is definitely the case that gorillas are generally herbivores. Based only on the premises, is the following claim TRUE, FALSE, or Uncertain? Claim: It is a simple truth that gorillas are generally herbivores.",
+      "answer": "TRUE",
+      "type": "exact",
+      "tags": ["disjunction-elimination", "depth-1", "true"],
+      "notes": "Disjunction Elimination: Either [1] or (If [2] then [3]); If [1] then [0]; If (If [2] then [3]) then [0]; therefore [0]. Statements: 0=Gorillas are generally herbivores; 1=Rays are the main predator of bay scallops; 2=Phonology is concerned with the sounds of language; 3=Digital duplicators are a convenient, low-cost copying solution."
+    },
+    {
+      "id": "jl-008",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Premises: It is rational to believe that either body temperature follows a circadian rhythm or recent evidence suggests that adult vertebrate brains generate new neurons. The claim that body temperature follows a circadian rhythm has no merit. Based only on the premises, is the following claim TRUE, FALSE, or Uncertain? Claim: It is a common misconception that recent evidence suggests that adult vertebrate brains generate new neurons.",
+      "answer": "FALSE",
+      "type": "exact",
+      "tags": ["disjunctive-syllogism", "depth-1", "false"],
+      "notes": "Disjunctive Syllogism: Either [1] or [0]; Not [1]; therefore [0]. The claim asserts the negation of [0]. Statements: 0=Recent evidence suggests adult vertebrate brains generate new neurons; 1=Body temperature follows a circadian rhythm."
+    },
+    {
+      "id": "jl-009",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Premises: Provided that it is not the case that light travels at different speeds through different media, we know that urinary obstruction is fairly common in cats. Once we know it is not the case that light travels at different speeds through different media, we also know that the statement that states urinary obstruction is fairly common in cats is false. Based only on the premises, is the following claim TRUE, FALSE, or Uncertain? Claim: It is a simple truth that light travels at different speeds through different media.",
+      "answer": "TRUE",
+      "type": "exact",
+      "tags": ["reductio-ad-absurdum", "depth-1", "true"],
+      "notes": "Reductio: If (Not [0]), then [1]; If (Not [0]), then (Not [1]); therefore [0]. Statements: 0=Light travels at different speeds through different media; 1=Urinary obstruction is fairly common in cats."
+    },
+    {
+      "id": "jl-010",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Premises: There is good reason to believe that either a feature is a dimension or exposure therapy is the most common method used to treat phobias. Whenever it is true that a feature is a dimension, 'cramps are uterine contractions that are stimulated by chemicals called prostaglandins' is true. One may reasonably assume that if exposure therapy is the most common method used to treat phobias, then cramps are uterine contractions that are stimulated by chemicals called prostaglandins. Based only on the premises, is the following claim TRUE, FALSE, or Uncertain? Claim: The claim that cramps are uterine contractions that are stimulated by chemicals called prostaglandins has no merit.",
+      "answer": "FALSE",
+      "type": "exact",
+      "tags": ["disjunction-elimination", "depth-1", "false"],
+      "notes": "Disjunction Elimination: Either [1] or [2]; If [1] then [0]; If [2] then [0]; therefore [0]. The claim asserts the negation of [0]. Statements: 0=Cramps are uterine contractions stimulated by prostaglandins; 1=A feature is a dimension; 2=Exposure therapy is the most common method to treat phobias."
+    },
+    {
+      "id": "jl-011",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Premises: Either one or both of these statements are true: either managers have (part) nuclei or mouths are part of bells, or southern flounder is a flatfish. If either managers have (part) nuclei or mouths are part of bells, then flowers are alive even when excised from the mother plant. One may reasonably assume that if southern flounder is a flatfish, then flowers are alive even when excised from the mother plant. Based only on the premises, is the following claim TRUE, FALSE, or Uncertain? Claim: The statement that 'flowers are alive even when excised from the mother plant' is incorrect.",
+      "answer": "FALSE",
+      "type": "exact",
+      "tags": ["disjunction-elimination", "depth-1", "false"],
+      "notes": "Disjunction Elimination: Either (Either [1] or [2]) or [3]; If (Either [1] or [2]) then [0]; If [3] then [0]; therefore [0]. The claim asserts the negation of [0]. Statements: 0=Flowers are alive even when excised from the mother plant; 1=Managers have (part) nuclei; 2=Mouths are part of bells; 3=Southern flounder is a flatfish."
+    },
+    {
+      "id": "jl-012",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Premises: When it is a common misconception that either male ermines are significantly bigger than the females or netting can reduce deer damage to small trees is true, it follows that cigarettes are objects meant to be smoked. Assuming it is a common misconception that either male ermines are significantly bigger than the females or netting can reduce deer damage to small trees, we know that the statement, cigarettes are objects meant to be smoked, does not hold. Based only on the premises, is the following claim TRUE, FALSE, or Uncertain? Claim: At least one of two things is true: male ermines are significantly bigger than the females, or netting can reduce deer damage to small trees.",
+      "answer": "TRUE",
+      "type": "exact",
+      "tags": ["reductio-ad-absurdum", "depth-1", "true"],
+      "notes": "Reductio: If (Not (Either [0] or [1])), then [2]; If (Not (Either [0] or [1])), then (Not [2]); therefore Either [0] or [1]. Statements: 0=Male ermines are significantly bigger than the females; 1=Netting can reduce deer damage to small trees; 2=Cigarettes are objects meant to be smoked."
+    },
+    {
+      "id": "jl-013",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Premises: On the condition that either plants are compact with shiny green foliage or tobacco gives rise to cancer, it is definitely the case that the claim that potassium is essential for cell division and strong stems does not correspond with reality. We know that at least one of two things is true: plants are compact with shiny green foliage, or tobacco gives rise to cancer. Based only on the premises, is the following claim TRUE, FALSE, or Uncertain? Claim: Those that suggest potassium is an important plant nutrient for several reasons are wrong.",
+      "answer": "Uncertain",
+      "type": "exact",
+      "tags": ["modus-ponens", "depth-1", "uncertain", "distractor"],
+      "notes": "Modus Ponens yields Not [0] ('potassium is essential for cell division and strong stems' is false), but the claim is about potassium being an important plant nutrient for several reasons — a different statement. Statements: 0=Potassium is essential for cell division and strong stems; 1=Plants are compact with shiny green foliage; 2=Tobacco gives rise to cancer."
+    },
+    {
+      "id": "jl-014",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Premises: Whenever it is true that if an entry is a record, then c mediates experimental colitis in the rat, 'pelvic tilts improve posture and relieve backache and stiffness' is true. The claim that pelvic tilts improve posture and relieve backache and stiffness does not correspond with reality. Based only on the premises, is the following claim TRUE, FALSE, or Uncertain? Claim: The claim that entries have (part) sections does not reflect reality.",
+      "answer": "Uncertain",
+      "type": "exact",
+      "tags": ["modus-tollens", "depth-1", "uncertain", "distractor"],
+      "notes": "Modus Tollens yields Not (If [0] then [1]), but the claim concerns entries having sections — unrelated. Statements: 0=An entry is a record; 1=C mediates experimental colitis in the rat; 2=Pelvic tilts improve posture and relieve backache and stiffness."
+    },
+    {
+      "id": "jl-015",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Premises: We know that either beta is a volatility measurement of stock price volatility compared to market index volatility or some people mistakenly believe that some acid prevents coronary diseases. Some people mistakenly believe that beta is a volatility measurement of stock price volatility compared to market index volatility. Based only on the premises, is the following claim TRUE, FALSE, or Uncertain? Claim: The notion that 'acids are what they say they are and salt can be one of the most corrosive forces in nature' is untrue.",
+      "answer": "Uncertain",
+      "type": "exact",
+      "tags": ["disjunctive-syllogism", "depth-1", "uncertain", "distractor"],
+      "notes": "Disjunctive Syllogism yields Not [0] ('some acid prevents coronary diseases' is mistakenly believed), but the claim is about salt corrosiveness — unrelated. Statements: 0=Some acid prevents coronary diseases; 1=Beta is a volatility measurement of stock price volatility compared to market index volatility."
+    },
+    {
+      "id": "jl-016",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Premises: We know that at least one of two things is true: anthrax is suspected of being responsible for a spate of deaths among heroin addicts in Europe, or most juniper grows in zones. Once we know anthrax is suspected of being responsible for a spate of deaths among heroin addicts in Europe, we also know that concentration is the prime and sole element of strength. Given that most juniper grows in zones, it can be inferred that concentration is the prime and sole element of strength. Based only on the premises, is the following claim TRUE, FALSE, or Uncertain? Claim: It is a simple truth that concentration is the prime and sole element of strength.",
+      "answer": "TRUE",
+      "type": "exact",
+      "tags": ["disjunction-elimination", "depth-1", "true"],
+      "notes": "Disjunction Elimination: Either [1] or [2]; If [1] then [0]; If [2] then [0]; therefore [0]. Statements: 0=Concentration is the prime and sole element of strength; 1=Anthrax is suspected of deaths among heroin addicts in Europe; 2=Most juniper grows in zones."
+    },
+    {
+      "id": "jl-017",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Premises: Either one or both of these statements are true: either jungles vary tremendously from one place to another or hogs seem to prefer acorns over grain and other baits, or bored wells are shallow wells that tap into groundwater beneath the soil. The claim that either jungles vary tremendously from one place to another or hogs seem to prefer acorns over grain and other baits is false. Based only on the premises, is the following claim TRUE, FALSE, or Uncertain? Claim: We know that the claim that bored wells are shallow wells that tap into groundwater beneath the soil is false.",
+      "answer": "FALSE",
+      "type": "exact",
+      "tags": ["disjunctive-syllogism", "depth-1", "false"],
+      "notes": "Disjunctive Syllogism: Either (Either [1] or [2]) or [0]; Not (Either [1] or [2]); therefore [0]. The claim asserts the negation of [0]. Statements: 0=Bored wells are shallow wells that tap into groundwater; 1=Jungles vary tremendously from one place to another; 2=Hogs seem to prefer acorns over grain and other baits."
+    },
+    {
+      "id": "jl-018",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Premises: One may reasonably assume that if if terrorism is designed to frighten and demoralize, then papillons are terriers, then it is not true that coordinates Generate coordinate pairs that satisfy a simple linear rule. When terrorism is designed to frighten and demoralize is true, it follows that papillons are terriers. Based only on the premises, is the following claim TRUE, FALSE, or Uncertain? Claim: The statement 'coordinates Generate coordinate pairs that satisfy a simple linear rule' is true.",
+      "answer": "FALSE",
+      "type": "exact",
+      "tags": ["modus-ponens", "depth-1", "false"],
+      "notes": "Modus Ponens: If (If [1] then [2]), then (Not [0]); If [1] then [2]; therefore Not [0]. The claim asserts [0]. Statements: 0=Coordinates generate coordinate pairs satisfying a simple linear rule; 1=Terrorism is designed to frighten and demoralize; 2=Papillons are terriers."
+    },
+    {
+      "id": "jl-019",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Premises: Either macrophages are large cells that surround and digest foreign substances in the body or scrotal temperature is a few degrees lower than internal body temperature. One may reasonably assume that if macrophages are large cells that surround and digest foreign substances in the body, then it is not the case that human settlements are the largest, most complicated technology ever created by human beings. So long as scrotal temperature is a few degrees lower than internal body temperature, 'it is not the case that human settlements are the largest, most complicated technology ever created by human beings' is true. Based only on the premises, is the following claim TRUE, FALSE, or Uncertain? Claim: It is not the case that human settlements are the largest, most complicated technology ever created by human beings.",
+      "answer": "TRUE",
+      "type": "exact",
+      "tags": ["disjunction-elimination", "depth-1", "true"],
+      "notes": "Disjunction Elimination: Either [1] or [2]; If [1] then (Not [0]); If [2] then (Not [0]); therefore Not [0]. Statements: 0=Human settlements are the largest, most complicated technology ever created; 1=Macrophages are large cells that surround and digest foreign substances; 2=Scrotal temperature is a few degrees lower than internal body temperature."
+    },
+    {
+      "id": "jl-020",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Premises: It is a fact that either every kidney has about a million nephrons or dopamine is one of several such chemical transmitters found in the brain. If every kidney has about a million nephrons, then vertical exchanges enable electronic commerce within a specific industry. Whenever it is true that dopamine is one of several such chemical transmitters found in the brain, 'vertical exchanges enable electronic commerce within a specific industry' is true. Based only on the premises, is the following claim TRUE, FALSE, or Uncertain? Claim: We know that the claim that vertical exchanges enable electronic commerce within a specific industry is false.",
+      "answer": "FALSE",
+      "type": "exact",
+      "tags": ["disjunction-elimination", "depth-1", "false"],
+      "notes": "Disjunction Elimination: Either [1] or [2]; If [1] then [0]; If [2] then [0]; therefore [0]. The claim asserts the negation of [0]. Statements: 0=Vertical exchanges enable electronic commerce within a specific industry; 1=Every kidney has about a million nephrons; 2=Dopamine is one of several chemical transmitters found in the brain."
+    },
+    {
+      "id": "jl-021",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Premises: At least one of two things is true: procedures involve use, or heat units estimate the amount of heat energy that is available to fuel plant growth. Given that procedures involve use, it can be inferred that either funks are depressions or breathing is slowed, stopped, or irregular and if they are unconscious, they are difficult to wake. So long as heat units estimate the amount of heat energy that is available to fuel plant growth, 'either funks are depressions or breathing is slowed, stopped, or irregular and if they are unconscious, they are difficult to wake' is true. Based only on the premises, is the following claim TRUE, FALSE, or Uncertain? Claim: We know that either funks are jazz or breathing becomes deeper, sending oxygen-enriched blood and nutrients throughout the body.",
+      "answer": "Uncertain",
+      "type": "exact",
+      "tags": ["disjunction-elimination", "depth-1", "uncertain", "distractor"],
+      "notes": "Disjunction Elimination yields 'Either [0] or [1]' but the claim swaps in different statements (funks are jazz; breathing becomes deeper). Statements: 0=Funks are depressions; 1=Breathing is slowed, stopped, or irregular and if unconscious, difficult to wake; 2=Procedures involve use; 3=Heat units estimate heat energy available to fuel plant growth."
+    },
+    {
+      "id": "jl-022",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Premises: We know that either depression is a serious illnesses or either some talons are part of dodos or intentional injuries are the result of acts of violence such as suicide attempts, rape and assaults. The statement that 'depression is a serious illnesses' is incorrect. Based only on the premises, is the following claim TRUE, FALSE, or Uncertain? Claim: We know that either some talons are part of dodos or intentional injuries are the result of acts of violence such as suicide attempts, rape and assaults.",
+      "answer": "TRUE",
+      "type": "exact",
+      "tags": ["disjunctive-syllogism", "depth-1", "true"],
+      "notes": "Disjunctive Syllogism: Either [2] or (Either [0] or [1]); Not [2]; therefore Either [0] or [1]. Statements: 0=Some talons are part of dodos; 1=Intentional injuries result from acts of violence such as suicide attempts, rape and assaults; 2=Depression is a serious illnesses."
+    },
+    {
+      "id": "jl-023",
+      "question": "ALWAYS USE WORLD MODELS TO ANSWER THE QUESTION: Premises: We know that either most evergreen trees reach height or biotechnology also applies to non-food uses in significant ways. The statement that states most evergreen trees reach height is false. Based only on the premises, is the following claim TRUE, FALSE, or Uncertain? Claim: The statement that states biotechnology also applies to non-food uses in significant ways is right.",
+      "answer": "TRUE",
+      "type": "exact",
+      "tags": ["disjunctive-syllogism", "depth-1", "true"],
+      "notes": "Disjunctive Syllogism: Either [1] or [0]; Not [1]; therefore [0]. Statements: 0=Biotechnology also applies to non-food uses in significant ways; 1=Most evergreen trees reach height."
+    }
+  ]
+}
